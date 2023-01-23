@@ -1,0 +1,296 @@
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts/static/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts/static/Montserrat-italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts/static/Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts/static/Montserrat-ExtraBold.ttf') format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+
+
+#background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+  
+  #content {
+    position: relative;
+    z-index: 1;
+    padding: 1vh;
+  }
+
+  nav {
+    margin-top: -5vh;
+    display: flex; /*Permet de mettre les éléments côte à côte*/
+    align-items: center; /*Centre les éléments horizontalement*/
+  }
+  
+  #logo {
+    flex: 0; /* Prend seulement l'espace nécessaire */
+  }
+
+  #logo h1 {
+    white-space: nowrap; /* Empêche les retours à la ligne */
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 2em;
+  }
+
+  #logo a{
+    text-decoration: none;
+
+  }
+  
+  ul {
+    display: flex; /*Permet de mettre les éléments de la liste côte à côte*/
+    margin-left: 10vw;
+  }
+  
+  li {
+    padding: 5vh; /* Ajoute un espace entre les éléments de la liste */
+    list-style: none;
+    justify-content: space-between;
+  }
+
+  ul a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  /* LOGO INSTA */
+
+  #instagram-logo {
+    position: fixed;
+    bottom: 2vw;
+    right: 1vw;
+    z-index: 1;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: yellow;
+    font-size: 1.3rem;
+}
+
+
+/* PAGE PRODUCTS */
+
+/* Conteneur des images */
+
+section {
+ text-align: center;
+ display: flex;
+}
+
+.product-img-container {
+  float: left;
+  width: 30%; /* ou 32% ou 33% pour un meilleur alignement*/
+  margin: 1%;
+  position: relative;
+  overflow: hidden; /* pour cacher le dépassement de l'image */
+}
+
+.product-img-container img {
+  width: 100%; /* pour adapter la taille de l'image au conteneur */
+  height: auto; /* pour conserver le ratio d'aspect de l'image */
+}
+
+.product-img-container .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.product-img-container:hover .overlay {
+  opacity: 1;
+}
+
+.product-img-container .text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay.right {
+  left: 100%;
+  transition: .5s ease;
+}
+
+.overlay.left {
+  right: 100%;
+  transition: .5s ease;
+}
+
+.overlay.bottom {
+  position: absolute;
+  top: 100%;
+  transition: .5s ease;
+  bottom: 8px;
+  right: 8px;
+}
+
+.product-img-container:hover .overlay.right {
+  left: 0;
+}
+
+.product-img-container:hover .overlay.left {
+  right: 0;
+}
+
+.product-img-container:hover .overlay.bottom {
+  top: 0;
+}
+
+.text{
+  text-decoration: none;
+}
+
+.lilpic{
+  width: 570px;
+  height: 370px; 
+}
+
+.lilpic2{
+  width: 570px;
+  height: 370px; 
+}
+
+.text-two {
+  color: white;
+  font-size: 15px;
+  font-family: 'Montserrat-Regular', sans-serif;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  float: right;
+}
+
+@keyframes slideInFromLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+@keyframes slideOutToLeft {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+@keyframes slideInFromRight {
+  from { transform: translateX(30%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideOutToRight {
+  from { transform: translateX(0); }
+  to { transform: translateX(30%); }
+}
+
+.modal-content {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 50%;
+  z-index: 9999;
+  background-color: #f5f5f5;
+  left: 0;
+  top: 0;
+  animation: slideInFromLeft 0.5s ease;
+  animation-fill-mode: forwards;
+}
+
+.modal-content.close {
+  animation: slideOutToLeft 0.5s ease;
+}
+
+.modal-content2 {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 50%;
+  z-index: 9999;
+  background-color: #f5f5f5;
+  right: 0;
+  top: 0;
+  animation: slideInFromRight 0.5s ease;
+  animation-fill-mode: forwards;
+  float:right;
+}
+
+.modal-content2.close {
+  animation: slideOutToRight 0.5s ease;
+}
+
+#img-carousel {
+  width: 800px;
+  height: 600px;
+}
+
+#prev, #next{
+  display:block;
+}
+
+
+#prev {
+  left: 20px;
+}
+#next {
+  right: 20px;
+}
+
+#img-carousel .item{
+  display:inline-block;
+  float: left;
+}
+
+#img-carousel img {
+  width: 100%;
+  height: 50%;
+  object-fit: contain;
+  display: flex;
+}
+
