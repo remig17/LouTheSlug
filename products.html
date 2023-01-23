@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="js/OwlCarousel2-2.3.4/src/css/owl.carousel.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script src="js/three.min.js"></script>
+    <title>Products</title>
+</head>
+<body>
+    <div id="content">
+        <nav>
+            <div id="logo">
+                <h1 style="color: black;">products</h1>
+            </div>
+            <ul>
+                <li><a href="index.html" style="color: black;">Home</a></li>
+                <li><a href="about.html" style="color: black;">About</a></li>
+                <li><a href="contact.html" style="color: black;">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="container">
+                <section>
+                    <div class="product-img-container">
+                        <img src="assets/img/chaise.jpg" alt="product 1" class="product-img" data-title="Product 1">
+                        <div class="overlay bottom">
+                            <h2 class="text">Siège de bar<h2>
+                            <a href="#" class="text-two open-modal" data-modal-id="modal-product-1" data-second-modal-id="second-modal-product-1">see more>></a>
+                        </div>
+                        <div class="modal-content" id="modal-product-1">
+                            <h2>Siège de bar</h2>
+                            <p>Informations sur le produit 1</p>
+
+                            <button class="close-modal">Fermer</button>
+                        </div>
+                        <div class="modal-content2" id="second-modal-product-1">
+                            
+                            <div id="img-carousel">
+                                <img class="img-item" src="assets/img/siegeRoseBar/Session studio-083.jpg" alt="image 1">
+                                <img class="img-item" src="assets/img/siegeRoseBar/Session studio-085.jpg" alt="image 1">
+                                
+                              
+                              <button id="prev">Previous</button>
+                              <button id="next">Next</button>
+                              
+                              <div id="carousel-modal">
+                                  <img id="carousel-image" src="">
+                                  <button id="close-modal">Close</button>
+                                  <button id="prev-carousel">Previous</button>
+                                  <button id="next-carousel">Next</button>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-img-container">
+                        <img src="assets/img/BureauChene/aperçu1.jpg" alt="product 2" class="product-img" data-title="Product 2">
+                        <div class="overlay bottom">
+                            <h2 class="text">Bureau en chêne</h2>
+                            <a href="#" class="text-two open-modal" data-modal-id="modal-product-2" data-second-modal-id="second-modal-product-2">see more>></a>
+                        </div>
+                        <div class="modal-content" id="modal-product-2">
+                            <h2>Bureau en chêne</h2>
+                            <p>Informations sur le produit 2</p>
+                            <button class="close-modal">Fermer</button>
+                        </div>
+                        <div class="modal-content2" id="second-modal-product-2">
+                            <h2>Plus d'informations sur le produit 1</h2>
+                            <p>Informations supplémentaires sur le produit 1</p>
+                        </div>
+                    </div>
+                    <div class="product-img-container">
+                        <img src="assets/img/miroirVert/miroir.jpg" alt="product 3" class="product-img" data-title="Product 3">
+                        <div class="overlay bottom">
+                            <h2 class="text">Miroir</h2>
+                            <a href="#" class="text-two open-modal" data-modal-id="modal-product-3" data-second-modal-id="second-modal-product-3">see more>></a>
+                        </div>
+                        <div class="modal-content" id="modal-product-3">
+                            <h2>Miroir</h2>
+                            <p>Informations sur le produit 3</p>
+                            <button class="close-modal">Fermer</button>
+                        </div>
+                        <div class="modal-content2" id="second-modal-product-3">
+                            <h2>Plus d'informations sur le produit 1</h2>
+                            <p>Informations supplémentaires sur le produit 1</p>
+                        </div>
+                    </div>
+                    
+                </section>
+
+            <section>
+                <div class="product-img-container">
+                    <img src="assets/img/jardiniereBleue/jardinière.jpg" alt="product 4" class="product-img" data-title="Product 4">
+                    <div class="overlay bottom">
+                        <h2 class="text">Jardinière</h2>
+                        <a href="#" class="text-two open-modal" data-modal-id="modal-product-4" data-second-modal-id="second-modal-product-4">see more>></a>
+                    </div>
+                    <div class="modal-content" id="modal-product-4">
+                        <h2>Jardinière</h2>
+                        <p>Informations sur le produit 4</p>
+                        <button class="close-modal">Fermer</button>
+                    </div>
+                    <div class="modal-content2" id="second-modal-product-4">
+                        <h2>Plus d'informations sur le produit 1</h2>
+                        <p>Informations supplémentaires sur le produit 1</p>
+                    </div>
+                   
+                    
+                </div>
+                <div class="product-img-container">
+                    <img src="assets/img/LampeOrange/lampe.jpg" alt="product 5" class="product-img" data-title="Product 5">
+                    <div class="overlay bottom">
+                        <h2 class="text">Lampe</h2>
+                        <a href="#" class="text-two open-modal" data-modal-id="modal-product-5" data-second-modal-id="second-modal-product-5">see more>></a>
+                    </div>
+                    <div class="modal-content" id="modal-product-5">
+                        <h2>Lampe</h2>
+                        <p>Informations sur le produit 5</p>
+                        <button class="close-modal">Fermer</button>
+                    </div>
+                    <div class="modal-content2" id="second-modal-product-5">
+                        <h2>Plus d'informations sur le produit 1</h2>
+                        <p>Informations supplémentaires sur le produit 1</p>
+                    </div>
+                </div>
+                <div class="product-img-container">
+                    <img src="assets/img/tableBasse/tableBasse.jpg" alt="product 6" class="product-img" data-title="Product 6">
+                    <div class="overlay bottom">
+                        <h2 class="text">Table basse</h2>
+                        <a href="#" class="text-two open-modal" data-modal-id="modal-product-6" data-second-modal-id="second-modal-product-6">see more>></a>
+                    </div>
+                    <div class="modal-content" id="modal-product-6">
+                        <h2>Table basse</h2>
+                        <p>Informations sur le produit 6</p>
+                        <button class="close-modal">Fermer</button>
+                    </div>
+                    <div class="modal-content2" id="second-modal-product-6">
+                        <h2>Plus d'informations sur le produit 1</h2>
+                        <p>Informations supplémentaires sur le produit 1</p>
+                    </div>
+                    </div>
+                    </section>
+                    <section>
+                        <div class="product-img-container lilpic">
+                            <img src="assets/img/meubleYemmaRose/meuble.jpg" alt="product 7" class="product-img" data-title="Product 7">
+                            <div class="overlay bottom ">
+                                <h2 class="text">Meuble</h2>
+                                <a href="#" class="text-two open-modal" data-modal-id="modal-product-7" data-second-modal-id="second-modal-product-7">see more>></a>
+                            </div>
+                            <div class="modal-content" id="modal-product-7">
+                                <h2>Meuble</h2>
+                                <p>Informations sur le produit 4</p>
+                                <button class="close-modal">Fermer</button>
+                            </div>
+                            <div class="modal-content2" id="second-modal-product-7">
+                                <h2>Plus d'informations sur le produit 1</h2>
+                                <p>Informations supplémentaires sur le produit 1</p>
+                            </div>
+                           
+                            
+                        </div>
+                        <div class="product-img-container lilpic2">
+                            <img src="assets/img/enseigne/enseigne2.jpg" alt="product 8" class="product-img" data-title="Product 8">
+                            <div class="overlay bottom">
+                                <h2 class="text">Enseigne</h2>
+                                <a href="#" class="text-two open-modal" data-modal-id="modal-product-8" data-second-modal-id="second-modal-product-8">see more>></a>
+                            </div>
+                            <div class="modal-content" id="modal-product-8">
+                                <h2>Enseigne ALTER</h2>
+                                <p>Informations sur le produit 4</p>
+                                <button class="close-modal">Fermer</button>
+                            </div>
+                            <div class="modal-content2" id="second-modal-product-8">
+                                <h2>Plus d'informations sur le produit 1</h2>
+                                <p>Informations supplémentaires sur le produit 1</p>
+                            </div>
+                           
+                            
+                        </div>
+                       
+                    </section>
+                </div>
+        </main>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.open-modal').on('click', function() {
+                var modalId = $(this).data('modal-id');
+                var secondModalId = $(this).data('second-modal-id');
+                $('#' + modalId).show();
+                $('#' + secondModalId).show();
+            });
+        
+            $('.close-modal').on('click', function() {
+                $('.modal-content').addClass('animated slideOutToLeft');
+                $('.modal-content2').addClass('animated slideOutToRight');
+                setTimeout(function() {
+                    $('.modal-content').hide();
+                    $('.modal-content2').hide();
+                }, 500);
+            });
+            var items = $('#carousel .item');
+            $('.open-modal-img').click(function() {
+                var currentItem = items.index(this);
+                $('#modal-image').attr('src', $(items[currentItem]).attr('src'));
+                $('#modal-img').show();
+            });
+
+            $('#close-modal').click(function() {
+                $('#modal-img').hide();
+            });
+
+            $('#prev-modal').click(function() {
+                currentItem--;
+                if (currentItem < 0) {
+                    currentItem = items.length - 1;
+                }
+                $('#modal-image').attr('src', $(items[currentItem]).attr('src'));
+            });
+
+            $('#next-modal').click(function() {
+                currentItem++;
+                if (currentItem >= items.length) {
+                    currentItem = 0;
+                }
+                $('#modal-image').attr('src', $(items[currentItem]).attr('src'));
+            });
+                
+        });
+        </script>
+    <script src="js/app.js"></script>
+    <script src="/js/OwlCarousel2-2.3.4/src/js/owl.carousel.js"></script>
+    
+    
+               
+
+    
+
+</body>
+</html>
+
