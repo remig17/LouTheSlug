@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="carousel">
+        <figure>
+            <img src="https://source.unsplash.com/EbuaKnSm8Zw/800x533" alt="">
+            <img src="https://source.unsplash.com/kG38b7CFzTY/800x533" alt="">
+            <img src="https://source.unsplash.com/nvzvOPQW0gc/800x533" alt="">
+            <img src="https://source.unsplash.com/2lYHiNtjSwg/800x533" alt="">
+            <img src="https://source.unsplash.com/CjS3QsRuxnE/800x533" alt="">
+            <img src="https://source.unsplash.com/xxeAftHHq6E/800x533" alt="">
+            <img src="https://source.unsplash.com/bjhrzvzZeq4/800x533" alt="">
+            <img src="https://source.unsplash.com/7mUXaBBrhoA/800x533" alt="">
+        </figure>
+        <nav>
+            <button class="nav prev">Prev</button>
+            <button class="nav next">Next</button>
+        </nav>
+    </div>
+
+
+
+
+
+    <script>
+        $(document).ready(function() {
+                var carousel = $('.carousel'),
+                figure = carousel.find('figure'),
+                nav = carousel.find('nav'),
+                numImages = figure.children().length,
+                theta = 2 * Math.PI / numImages,
+                currImage = 0;
+
+                nav.on('click', 'button', function(e) {
+                e.stopPropagation();
+                var t = $(e.target);
+                if (t.is('button')) {
+                if (t.hasClass('next')) {
+                currImage++;
+                }
+                else {
+                currImage--;
+                }
+                figure.css({'transform': 'rotateY(' + currImage * -theta + 'rad)'});
+                }
+                });
+         });
+    </script>
+    
+</body>
+</html>

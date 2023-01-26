@@ -294,3 +294,63 @@ section {
   display: flex;
 }
 
+
+#carouselHeader {
+  h3{
+    position: relative;
+    text-align: center;
+  }
+}
+/* Indicators list style */
+.project-slide .carousel-indicators {
+bottom: 0;
+left: 0;
+margin-left: 5px;
+width: 100%;
+}
+/* Indicators list style */
+.project-slide .carousel-indicators li {
+border: medium none;
+border-radius: 0;
+float: middle;
+height: 35px;
+margin-bottom: -10px;
+margin-left: 0;
+margin-right: 5px !important;
+margin-top: 0;
+width: 50px;
+border-radius: 3px;
+
+}
+/* Indicators images style */
+.project-slide .carousel-indicators img {
+border: 2px solid ;
+border-radius: 3px;
+float: left;
+height: 35px;
+left: 0;
+width: 50px;
+opacity: 0.7;
+}
+/* Indicators active image style */
+.project-slide .carousel-indicators .active img {
+border: 2px solid ;
+opacity: 1;
+}
+/* carousel-control */
+.carousel-control{
+color: ; 
+opacity: 0.5;
+}
+.carousel-control:hover,
+.carousel-control:focus {
+color: ;
+opacity: 1;
+}
+.carousel-control.left, .carousel-control.right{ 
+  background: none !important;
+  filter: none !important;
+  
+}
+
+
