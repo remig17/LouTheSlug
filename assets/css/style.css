@@ -106,6 +106,14 @@
 
 /* Conteneur des images */
 
+p, h2{
+  font-family: 'Montserrat', sans-serif;
+}
+
+#modal-product1 h2{
+  color: #B175A6;
+}
+
 section {
  text-align: center;
  display: flex;
