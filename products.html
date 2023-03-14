@@ -461,17 +461,7 @@ function carouselFunction(root) {
             $('.modal-content').removeClass('modal-opened');
             }, 500);
         });
-            var items = $('#carousel .item');
-            $('.open-modal-img').click(function() {
-                var currentItem = items.index(this);
-                $('#modal-image').attr('src', $(items[currentItem]).attr('src'));
-                $('#modal-img').show();
-            });
-
-            $('#close-modal').click(function() {
-                $('#modal-img').hide();
-            });
-
+       
 
                 $('.toggle-menu').click(function() {
                     $('nav ul').slideToggle();
