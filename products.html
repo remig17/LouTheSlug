@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="assets/css/products.css">
     <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
    
 
     <title>Products</title>
 </head>
+
+<style>
+
+</style>
+
 <body>
     <div id="content">
         <nav>
@@ -18,67 +22,111 @@
                 <h1 style="color: black;">products</h1>
             </div>
             <ul>
-                <li><a href="index.html" style="color: black;">Home</a></li>
-                <li><a href="about.html" style="color: black;">About</a></li>
-                <li><a href="contact.html" style="color: black;">Contact</a></li>
+                <li><a href="index.html" style="color: black;">home</a></li>
+                <li><a href="about.html" style="color: black;">about</a></li>
+                <li><a href="contact.html" style="color: black;">contact</a></li>
             </ul>
+            <button class="toggle-menu">&#9776;</button>
         </nav>
         <main>
             <div class="container">
                 <section>
                     <div class="product-img-container">
-                        <img src="assets/img/chaise.jpg" alt="product 1" class="product-img" data-title="Product 1">
+                        <img src="assets/img/chaise.jpg" alt="product 1" class="product-img no-lazyload" data-title="Product 1">
                         <div class="overlay bottom">
                             <h2 class="text">Siège de bar<h2>
                             <a href="#" class="text-two open-modal" data-modal-id="modal-product-1" data-second-modal-id="second-modal-product-1">see more>></a>
                         </div>
-                        <div class="modal-content" id="modal-product-1">
-                            <h2>Siège de bar</h2>
-                            <p>Chaise haute de bar « FreeGunna »</p>
-                                <p>Isolant sculpté et résine, pied chrome réglable</p>
-                                <p>Disponible sur mesure et sur demande</p>
-
-                            <button class="close-modal">Fermer</button>
-                        </div>
-                        <div class="modal-content2" id="second-modal-product-1">
-                            
-                            <div class="carousel">
-                                <figure>
-                                    <img src="assets/img/siegeRoseBar/Session studio-083.jpg" alt="">
-                                    <img src="assets/img/siegeRoseBar/Session studio-085.jpg" alt="">
-                                    <img src="assets/img/siegeRoseBar/Session studio-087.jpg" alt="">
-                                    <img src="assets/img/siegeRoseBar/Session studio-088.jpg" alt="">
-                                    <img src="assets/img/siegeRoseBar/Session studio-090.jpg" alt="">
-                                    <img src="assets/img/siegeRoseBar/Session studio-092.jpg" alt="">
-                                    <img src="assets/img/siegeRoseBar/Session studio-094.jpg" alt="">
-                                    <img src="assets/img/siegeRoseBar/Session studio-095.jpg" alt="">
-                                    
-                                </figure>
-                                <nav class="nav2">
-                                    <button class="nav prev">Prev</button>
-                                    <button class="nav next">Next</button>
-                                </nav>
-                            </div>                        
-                        </div>
+                        <div class="modal-container">
+                            <div class="modal-content" id="modal-product-1" style="display:none">
+                                <h3 style="color:#AC6896; margin-bottom: 1rem;">Chaise haute de bar « FreeGunna »</h3>
+                                <div style="display: flex; justify-content: center; align-items: center;">
+                                  <table style="border: 2px solid black; border-collapse: collapse; margin-top: 25%; margin-left: 10%;">
+                                    <tbody>
+                                      <tr>
+                                        <td style="border-bottom: 2px solid black; border-right: 2px solid black; vertical-align: middle; text-align: left; padding: 5px;"><strong>Matériaux</strong></td>
+                                        <td style="border-bottom: 2px solid black;"><p>Isolant sculpté et résine, pied chrome réglable</p></td>
+                                      </tr>
+                                      <tr>
+                                        <td style="border-right: 2px solid black; vertical-align: middle; text-align: left; padding: 5px;"><strong>Disponibilité</strong></td>
+                                        <td><p>Disponible sur mesure et sur demande</p></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <button class="close-modal" style="position: absolute; top: 0; left: 0; font-size: 1.5rem; padding: 0.2rem 0.4rem; background: none; border: none; cursor: pointer;">&#x2715;</button>
+                              </div>
+                              
+                              
+                              
+                              
+                              
+                            <div class="modal-content2" id="second-modal-product-1">
+                                
+                                <div class="carousel" data-gap="5">
+                                    <figure>
+                                        <img src="assets/img/siegeRoseBar/Session studio-083.jpg" alt="">
+                                        <img src="assets/img/siegeRoseBar/Session studio-085.jpg" alt="">
+                                        <img src="assets/img/siegeRoseBar/Session studio-087.jpg" alt="">
+                                        <img src="assets/img/siegeRoseBar/Session studio-088.jpg" alt="">
+                                        <img src="assets/img/siegeRoseBar/Session studio-090.jpg" alt="">
+                                        <img src="assets/img/siegeRoseBar/Session studio-092.jpg" alt="">
+                                        <img src="assets/img/siegeRoseBar/Session studio-094.jpg" alt="">
+                                        <img src="assets/img/siegeRoseBar/Session studio-095.jpg" alt="">
+                                        
+                                    </figure>
+                                    <nav class="nav2">
+                                        <button class="nav prev">Prev</button>
+                                        <button class="nav next">Next</button>
+                                    </nav>
+                                </div>                        
+                            </div>
+                    </div>
                     </div>
                     <div class="product-img-container">
-                        <img src="assets/img/BureauChene/aperçu1.jpg" alt="product 2" class="product-img" data-title="Product 2">
+                        <img src="assets/img/BureauChene/aperçu1.jpg" alt="product 2" class="product-img no-lazyload" data-title="Product 2">
                         <div class="overlay bottom">
                             <h2 class="text">Bureau en chêne</h2>
                             <a href="#" class="text-two open-modal" data-modal-id="modal-product-2" data-second-modal-id="second-modal-product-2">see more>></a>
                         </div>
                         <div class="modal-content" id="modal-product-2">
-                            <h2>Bureau en chêne</h2>
-                            <p>Informations sur le produit 2</p>
-                            <button class="close-modal">Fermer</button>
+                            <h3 style="color:#AC6896; margin-bottom: 1rem;">Bureau en chêne</h3>
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <table style="border: 2px solid black; border-collapse: collapse; margin-top: 25%; margin-left: 10%;">
+                                  <tbody>
+                                    <tr>
+                                      <td style="border-bottom: 2px solid black; border-right: 2px solid black; vertical-align: middle; text-align: left; padding: 5px;"><strong>Matériaux</strong></td>
+                                      <td style="border-bottom: 2px solid black;"><p>Isolant sculpté et résine, pied chrome réglable</p></td>
+                                    </tr>
+                                    <tr>
+                                      <td style="border-right: 2px solid black; vertical-align: middle; text-align: left; padding: 5px;"><strong>Disponibilité</strong></td>
+                                      <td><p>Disponible sur mesure et sur demande</p></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <button class="close-modal" style="position: absolute; top: 0; left: 0; font-size: 1.5rem; padding: 0.2rem 0.4rem; background: none; border: none; cursor: pointer;">&#x2715;</button>
                         </div>
                         <div class="modal-content2" id="second-modal-product-2">
-                            <h2>Plus d'informations sur le produit 1</h2>
-                            <p>Informations supplémentaires sur le produit 1</p>
+                            <div class="carousel carousel-7">
+                                <figure>
+                                    <img src="assets/img/BureauChene/Session studio-146.jpg" alt="">
+                                    <img src="assets/img/BureauChene/Session studio-156.jpg" alt="">
+                                    <img src="assets/img/BureauChene/Session studio-162.jpg" alt="">
+                                    <img src="assets/img/BureauChene/Session studio-165.jpg" alt="">
+                                    <img src="assets/img/BureauChene/Session studio-167.jpg" alt="">
+                                    <img src="assets/img/BureauChene/Session studio-169.jpg" alt="">
+                                    <img src="assets/img/BureauChene/aperçu1.jpg" alt="">
+                                </figure>
+                                <nav class="nav2">
+                                    <button class="nav prev">Prev</button>
+                                    <button class="nav next">Next</button>
+                                </nav>
+                            </div>   
                         </div>
                     </div>
                     <div class="product-img-container">
-                        <img src="assets/img/miroirVert/miroir.jpg" alt="product 3" class="product-img" data-title="Product 3">
+                        <img src="assets/img/miroirVert/miroir.jpg" alt="product 3" class="product-img no-lazyload" data-title="Product 3">
                         <div class="overlay bottom">
                             <h2 class="text">Miroir</h2>
                             <a href="#" class="text-two open-modal" data-modal-id="modal-product-3" data-second-modal-id="second-modal-product-3">see more>></a>
@@ -89,8 +137,19 @@
                             <button class="close-modal">Fermer</button>
                         </div>
                         <div class="modal-content2" id="second-modal-product-3">
-                            <h2>Plus d'informations sur le produit 1</h2>
-                            <p>Informations supplémentaires sur le produit 1</p>
+                            <div class="carousel carousel">
+                                <figure>
+                                    <img src="assets/img/miroirVert/Session studio-057.jpg" alt="">
+                                    <img src="assets/img/miroirVert/Session studio-062.jpg" alt="">
+                                    <img src="assets/img/miroirVert/Session studio-063.jpg" alt="">
+                                    <img src="assets/img/miroirVert/miroir.jpg" alt="">
+                                    
+                                </figure>
+                                <nav class="nav2">
+                                    <button class="nav prev">Prev</button>
+                                    <button class="nav next">Next</button>
+                                </nav>
+                            </div>   
                         </div>
                     </div>
                     
@@ -98,7 +157,8 @@
 
             <section>
                 <div class="product-img-container">
-                    <img src="assets/img/jardiniereBleue/jardinière.jpg" alt="product 4" class="product-img" data-title="Product 4">
+                    <img data-src="assets/img/jardiniereBleue/jardinière.jpg" src="loading.gif" alt="product 4" class="product-img" data-title="Product 4">
+
                     <div class="overlay bottom">
                         <h2 class="text">Jardinière</h2>
                         <a href="#" class="text-two open-modal" data-modal-id="modal-product-4" data-second-modal-id="second-modal-product-4">see more>></a>
@@ -109,14 +169,26 @@
                         <button class="close-modal">Fermer</button>
                     </div>
                     <div class="modal-content2" id="second-modal-product-4">
-                        <h2>Plus d'informations sur le produit 1</h2>
-                        <p>Informations supplémentaires sur le produit 1</p>
+                        <div class="carousel">
+                            <figure>
+                                <img src="assets/img/jardiniereBleue/jardinière.jpg" alt="">
+                                <img src="assets/img/jardiniereBleue/Session studio-074.jpg" alt="">
+                                <img src="assets/img/jardiniereBleue/Session studio-078.jpg" alt="">
+                                <img src="assets/img/jardiniereBleue/Session studio-081.jpg" alt="">
+
+                            </figure>
+                            <nav>
+                                <button class="nav prev">Prev</button>
+                                <button class="nav next">Next</button>
+                            </nav>
+                        </div>
                     </div>
                    
                     
                 </div>
                 <div class="product-img-container">
-                    <img src="assets/img/LampeOrange/lampe.jpg" alt="product 5" class="product-img" data-title="Product 5">
+                    <img data-src="assets/img/LampeOrange/lampe.jpg" src="loading.gif" alt="product 5" class="product-img" data-title="Product 5">
+
                     <div class="overlay bottom">
                         <h2 class="text">Lampe</h2>
                         <a href="#" class="text-two open-modal" data-modal-id="modal-product-5" data-second-modal-id="second-modal-product-5">see more>></a>
@@ -127,12 +199,24 @@
                         <button class="close-modal">Fermer</button>
                     </div>
                     <div class="modal-content2" id="second-modal-product-5">
-                        <h2>Plus d'informations sur le produit 1</h2>
-                        <p>Informations supplémentaires sur le produit 1</p>
+                        <div class="carousel">
+                            <figure>
+                                <img src="assets/img/LampeOrange/lampe.jpg" alt="">
+                                <img src="assets/img/LampeOrange/Session studio-067.jpg" alt="">
+                                <img src="assets/img/LampeOrange/Session studio-070.jpg" alt="">
+                                <img src="assets/img/LampeOrange/Session studio-072.jpg" alt="">
+                             
+                            </figure>
+                            <nav class="nav2">
+                                <button class="nav prev">Prev</button>
+                                <button class="nav next">Next</button>
+                            </nav>
+                        </div>   
                     </div>
                 </div>
                 <div class="product-img-container">
-                    <img src="assets/img/tableBasse/tableBasse.jpg" alt="product 6" class="product-img" data-title="Product 6">
+                    <img data-src="assets/img/tableBasse/tableBasse.jpg" src="loading.gif" alt="product 6" class="product-img" data-title="Product 6">
+
                     <div class="overlay bottom">
                         <h2 class="text">Table basse</h2>
                         <a href="#" class="text-two open-modal" data-modal-id="modal-product-6" data-second-modal-id="second-modal-product-6">see more>></a>
@@ -143,15 +227,29 @@
                         <button class="close-modal">Fermer</button>
                     </div>
                     <div class="modal-content2" id="second-modal-product-6">
-                        <h2>Plus d'informations sur le produit 1</h2>
-                        <p>Informations supplémentaires sur le produit 1</p>
+                        <div class="carousel">
+                            <figure>
+                                <img src="assets/img/tableBasse/tableBasse.jpg">
+                                <img src="assets/img/tableBasse/Session studio-112.jpg">
+                                <img src="assets/img/tableBasse/Session studio-114.jpg">
+                                <img src="assets/img/tableBasse/Session studio-119.jpg">
+                                <img src="assets/img/tableBasse/Session studio-121.jpg">
+                                <img src="assets/img/tableBasse/Session studio-126.jpg">
+                             
+                            </figure>
+                            <nav class="nav2">
+                                <button class="nav prev">Prev</button>
+                                <button class="nav next">Next</button>
+                            </nav>
+                        </div>   
                     </div>
                     </div>
                     </section>
                     <section>
                         <div class="product-img-container lilpic">
-                            <img src="assets/img/meubleYemmaRose/meuble.jpg" alt="product 7" class="product-img" data-title="Product 7">
-                            <div class="overlay bottom ">
+                            <img data-src="assets/img/meubleYemmaRose/meuble.jpg" src="loading.gif" alt="product 7" class="product-img" data-title="Product 7">
+
+                            <div class="overlay bottom meubleRose">
                                 <h2 class="text">Meuble</h2>
                                 <a href="#" class="text-two open-modal" data-modal-id="modal-product-7" data-second-modal-id="second-modal-product-7">see more>></a>
                             </div>
@@ -161,14 +259,26 @@
                                 <button class="close-modal">Fermer</button>
                             </div>
                             <div class="modal-content2" id="second-modal-product-7">
-                                <h2>Plus d'informations sur le produit 1</h2>
-                                <p>Informations supplémentaires sur le produit 1</p>
+                                <div class="carousel">
+                                    <figure>
+                                        <img src="assets/img/meubleYemmaRose/meuble.jpg">
+                                        <img src="assets/img/meubleYemmaRose/DSCF1671.jpg">
+                                        <img src="assets/img/meubleYemmaRose/DSCF1672.jpg">
+                                        <img src="assets/img/meubleYemmaRose/DSCF1674.jpg">
+                                        <img src="assets/img/meubleYemmaRose/DSCF1676.jpg">
+                                     
+                                    </figure>
+                                    <nav class="nav2">
+                                        <button class="nav prev">Prev</button>
+                                        <button class="nav next">Next</button>
+                                    </nav>
+                                </div>   
                             </div>
                            
                             
                         </div>
                         <div class="product-img-container lilpic2">
-                            <img src="assets/img/enseigne/enseigne2.jpg" alt="product 8" class="product-img" data-title="Product 8">
+                            <img data-src="assets/img/enseigne/enseigne2.jpg" src="loading.gif" alt="product 8" class="product-img" data-title="Product 8">
                             <div class="overlay bottom">
                                 <h2 class="text">Enseigne</h2>
                                 <a href="#" class="text-two open-modal" data-modal-id="modal-product-8" data-second-modal-id="second-modal-product-8">see more>></a>
@@ -179,35 +289,178 @@
                                 <button class="close-modal">Fermer</button>
                             </div>
                             <div class="modal-content2" id="second-modal-product-8">
-                                <h2>Plus d'informations sur le produit 1</h2>
-                                <p>Informations supplémentaires sur le produit 1</p>
+                                
+                                <div class="carousel">
+                                    <figure>
+                                        <img src="assets/img/enseigne/02112022__DSC2038_CONCEPT_STORE_ALTER_x_PITINOME.jpg">
+                                        <img src="assets/img/enseigne/29102022__DSC1681_INAUGURATION_ALTER_x_PITINOME.jpg" >
+                                        <img src="assets/img/enseigne/29102022__DSC1676_INAUGURATION_ALTER_x_PITINOME.jpg" style="margin-top: 120px;">
+                                        <img src="assets/img/enseigne/enseigne2.jpg" style="margin-top: 120px;">
+                                        <img src="assets/img/enseigne/enseigne.jpg">
+                                        
+                                     
+                                    </figure>
+                                    <nav class="nav2">
+                                        
+                                        <button class="nav prev">Prev</button>
+                                        <button class="nav next">Next</button>
+                                    </nav>
+                                </div>   
                             </div>
                            
                             
                         </div>
+
                        
+                    </section>
+                    <section>
+                        <div class="product-img-container vernis">
+                            <img data-src="assets/img/supportVernis/TEST-615.jpg" src="loading.gif" alt="product 9" class="product-img" data-title="Product 9">
+                            <div class="overlay bottom">
+                                <h2 class="text">Support Vernis</h2>
+                                <a href="#" class="text-two open-modal" data-modal-id="modal-product-9" data-second-modal-id="second-modal-product-9">see more>></a>
+                            </div>
+                            <div class="modal-content" id="modal-product-9">
+                                <h2>Support pour vernis</h2>
+                                <p>Informations sur le produit 4</p>
+                                <button class="close-modal">Fermer</button>
+                            </div>
+                            <div class="modal-content2" id="second-modal-product-9">
+                                <div class="carousel">
+                                    <figure>
+                                        <img src="assets/img/supportVernis/TEST-097.jpg">
+                                        <img src="assets/img/supportVernis/TEST-226.jpg">
+                                        <img src="assets/img/supportVernis/TEST-358.jpg">
+                                        <img src="assets/img/supportVernis/TEST-365.jpg">
+                                        <img src="assets/img/supportVernis/TEST-368.jpg">
+                                        <img src="assets/img/supportVernis/TEST-566.jpg">
+                                        <img src="assets/img/supportVernis/TEST-574.jpg">
+                                        <img src="assets/img/supportVernis/TEST-615.jpg">   
+                                    </figure>
+                                    <nav class="nav2">
+                                        
+                                        <button class="nav prev">Prev</button>
+                                        <button class="nav next">Next</button>
+                                    </nav>
+                                </div>   
+                            </div>
                     </section>
                 </div>
         </main>
     </div>
 
     <script>
+window.addEventListener('load', () => {
+  const carousels = document.querySelectorAll('.carousel');
+
+  for (let i = 0; i < carousels.length; i++) {
+    const carousel = carousels[i];
+    const images = carousel.querySelectorAll('img');
+    let imageCount = 0;
+
+    images.forEach(image => {
+      image.addEventListener('load', handleImageLoad);
+    });
+
+    function handleImageLoad() {
+      imageCount++;
+
+      if (imageCount === images.length) {
+        carousel.classList.add('loaded');
+      }
+    }
+
+    carouselFunction(carousel);
+  }
+});
+
+function carouselFunction(root) {
+  const figure = root.querySelector('figure');
+  const nav = root.querySelector('nav');
+  const images = figure.children;
+  const n = images.length;
+  const gap = root.dataset.gap || 0;
+  const bfc = 'bfc' in root.dataset;
+  const theta = 2 * Math.PI / n;
+  let currImage = 0;
+
+  setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
+  window.addEventListener('resize', () => {
+    setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
+  });
+
+  setupNavigation();
+
+  function setupCarousel(n, s) {
+    const apothem = s / (2 * Math.tan(Math.PI / n));
+
+    figure.style.transformOrigin = `50% 50% ${-apothem}px`;
+
+    for (let i = 0; i < n; i++) {
+      images[i].style.padding = `${gap}px`;
+    }
+    for (let i = 1; i < n; i++) {
+      images[i].style.transformOrigin = `50% 50% ${-apothem}px`;
+      images[i].style.transform = `rotateY(${i * theta}rad)`;
+    }
+    if (bfc) {
+      for (let i = 0; i < n; i++) {
+        images[i].style.backfaceVisibility = 'hidden';
+      }
+    }
+
+    rotateCarousel(currImage);
+  }
+
+  function setupNavigation() {
+    nav.addEventListener('click', onClick, true);
+
+    function onClick(e) {
+      e.stopPropagation();
+
+      const t = e.target;
+      if (t.tagName.toUpperCase() != 'BUTTON') {
+        return;
+      }
+
+      if (t.classList.contains('next')) {
+        currImage++;
+      } else {
+        currImage--;
+      }
+
+      rotateCarousel(currImage);
+    }
+
+  }
+
+  function rotateCarousel(imageIndex) {
+    figure.style.transform = `rotateY(${imageIndex * -theta}rad)`;
+  }
+
+}
+
+
+    </script>
+    <script>
         $(document).ready(function() {
             $('.open-modal').on('click', function() {
-                var modalId = $(this).data('modal-id');
-                var secondModalId = $(this).data('second-modal-id');
-                $('#' + modalId).show();
-                $('#' + secondModalId).show();
-            });
-        
-            $('.close-modal').on('click', function() {
-                $('.modal-content').addClass('animated slideOutToLeft');
-                $('.modal-content2').addClass('animated slideOutToRight');
-                setTimeout(function() {
-                    $('.modal-content').hide();
-                    $('.modal-content2').hide();
-                }, 500);
-            });
+            var modalId = $(this).data('modal-id');
+            var secondModalId = $(this).data('second-modal-id');
+            $('#' + modalId).show();
+            $('#' + secondModalId).show();
+            $('#' + modalId).find('.modal-content').addClass('modal-opened');
+        });
+
+        $('.close-modal').on('click', function() {
+            $('.modal-content').addClass('animated slideOutToLeft');
+            $('.modal-content2').addClass('animated slideOutToRight');
+            setTimeout(function() {
+            $('.modal-content').hide();
+            $('.modal-content2').hide();
+            $('.modal-content').removeClass('modal-opened');
+            }, 500);
+        });
             var items = $('#carousel .item');
             $('.open-modal-img').click(function() {
                 var currentItem = items.index(this);
@@ -219,42 +472,23 @@
                 $('#modal-img').hide();
             });
 
-            $('#prev-modal').click(function() {
-                currentItem--;
-                if (currentItem < 0) {
-                    currentItem = items.length - 1;
-                }
-                $('#modal-image').attr('src', $(items[currentItem]).attr('src'));
-            });
 
-            $('#next-modal').click(function() {
-                currentItem++;
-                if (currentItem >= items.length) {
-                    currentItem = 0;
-                }
-                $('#modal-image').attr('src', $(items[currentItem]).attr('src'));
-            });
-            var carousel = $('.carousel'),
-                figure = carousel.find('figure'),
-                nav = carousel.find('nav'),
-                numImages = figure.children().length,
-                theta = 2 * Math.PI / numImages,
-                currImage = 0;
+                $('.toggle-menu').click(function() {
+                    $('nav ul').slideToggle();
+                    });
+                $('.toggle-menu').click(function() {
+                    $('ul').toggleClass('menu');
+                     });
+                     $(window).scroll(function() {
+                    $('.product-img:not(.no-lazyload)').each(function() {
+                    var imagePos = $(this).offset().top;
+                    var topOfWindow = $(window).scrollTop();
 
-                nav.on('click', 'button', function(e) {
-                e.stopPropagation();
-                var t = $(e.target);
-                if (t.is('button')) {
-                if (t.hasClass('next')) {
-                currImage++;
-                }
-                else {
-                currImage--;
-                }
-                figure.css({'transform': 'rotateY(' + currImage * -theta + 'rad)'});
-                }
-                });
-                
+                    if (imagePos < topOfWindow + $(window).height() && $(this).attr('src') == 'loading.gif') {
+                        $(this).attr('src', $(this).attr('data-src'));
+                    }
+                    });
+  });
         });
         </script>
     <script src="js/app.js"></script>

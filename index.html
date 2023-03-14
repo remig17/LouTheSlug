@@ -4,30 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
     <script src="js/three.js"></script>
 
     <title>LouTheSlug</title>
 </head>
+<style>
+   
+
+
+</style>
 <body>
     <img src="assets/img/background.jpg" id="background-image">
     <div id="content">
-        <nav>
+        <nav class="nav-index">
             <div id="logo">
                 <a href="index.html"><h1>LOU THE SLUG</h1></a>
               </div>
-            <ul>
+            <ul class="menu">
                 <li><a href="products.html">products</a></li>
                 <li><a href="about.html">about</a></li>
                 <li><a href="contact.html">contact</a></li>
             </ul>
+            <button class="toggle-menu">&#9776;</button>
         </nav>
         <a href="https://www.instagram.com/loutheslug/" id="instagram-logo">
             instagram
          </a>
          
     </div>
+        <script>
+          $(document).ready(function() {
+    $('.toggle-menu').click(function() {
+        $('nav ul').slideToggle();
+    });
+    $('.toggle-menu').click(function() {
+        $('ul').toggleClass('menu');
+    });
     
+});
+        </script>
 </body>
 </html>

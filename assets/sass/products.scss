@@ -1,0 +1,408 @@
+@use "sass:math";
+
+nav {
+    margin-top: -5vh;
+    display: flex;
+    align-items: center;
+    animation: slide-in 0.5s forwards;
+    
+    #logo {
+      flex: 0;
+      
+      h1 {
+        white-space: nowrap;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bolder;
+        font-size: 2em;
+      }
+      
+      a {
+        text-decoration: none;
+      }
+    }
+    
+    ul {
+      display: flex;
+      margin-left: 10vw;
+      
+      li {
+        padding: 5vh;
+        list-style: none;
+        justify-content: space-between;
+        
+        a {
+          text-decoration: none;
+          color: white;
+          font-family: "Montserrat", sans-serif;
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    
+    .toggle-menu {
+      display: none;
+      font-size: 24px;
+      background-color: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+      position: absolute;
+      top: 3%;
+      right: 3%;
+      margin: 0;
+      z-index: 10;
+    }
+  }
+
+  /* Conteneur des images */
+
+p, h2{
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  #modal-product1 h2{
+    color: #B175A6;
+  }
+  
+  section {
+   text-align: center;
+   display: flex;
+  }
+  
+  .toggle-menu {
+    display: none;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    margin: 0;
+    z-index: 10;
+  }
+  
+  .product-img-container {
+    float: left;
+    width: 30%; // ou 32% ou 33% pour un meilleur alignement
+    margin: 1%;
+    position: relative;
+    overflow: hidden; // pour cacher le dépassement de l'image
+  
+    img {
+      width: 100%; // pour adapter la taille de l'image au conteneur
+      height: auto; // pour conserver le ratio d'aspect de l'image
+    }
+  
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: 0.5s ease;
+      background-color: rgba(0, 0, 0, 0.5);
+  
+      &.right {
+        left: 100%;
+        transition: 0.5s ease;
+      }
+  
+      &.left {
+        right: 100%;
+        transition: 0.5s ease;
+      }
+  
+      &.bottom {
+        position: absolute;
+        top: 100%;
+        transition: 0.5s ease;
+        bottom: 8px;
+        right: 8px;
+      }
+    }
+  
+    &:hover {
+      .overlay {
+        opacity: 1;
+  
+        &.right {
+          left: 0;
+        }
+  
+        &.left {
+          right: 0;
+        }
+  
+        &.bottom {
+          top: 0;
+        }
+      }
+    }
+  
+    .text {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  
+    .text-two {
+      color: white;
+      font-size: 15px;
+      font-family: 'Montserrat-Regular', sans-serif;
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      float: right;
+    }
+  }
+  
+  .lilpic {
+    width: 42.5vw;
+  }
+  
+  .lilpic2 {
+    width: 42.5vw;
+  }
+  
+  .text {
+    text-decoration: none;
+  }
+  
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideOutToLeft {
+    from {
+      transform: translateX(0);
+    }
+  
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(30%);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideOutToRight {
+    from {
+      transform: translateX(0);
+    }
+  
+    to {
+      transform: translateX(30%);
+    }
+  }
+  
+  .modal-content {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 50%;
+    z-index: 9999;
+    background-color: #f5f5f5;
+    left: 0;
+    top: 0;
+    animation: slideInFromLeft 0.5s ease;
+    animation-fill-mode: forwards;
+  
+    &.close {
+      animation: slideOutToLeft 0.5s ease;
+    }
+  }
+  
+  .modal-content2 {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 50%;
+    z-index: 9999;
+    background-color: #f5f5f5;
+    right: 0;
+    top: 0;
+    animation: slideInFromRight 0.5s ease;
+    animation-fill-mode: forwards;
+    overflow-y: visible;
+    float: right;
+  
+    &.close {
+      animation: slideOutToRight 0.5s ease;
+    }
+  }
+  
+
+
+// Carousel configuration parameters
+$item-width: 40%; // Now we can use percentages!
+$item-separation: 0px; // This now is set with Js
+$viewer-distance: 500px;
+
+.carousel {
+  padding: 20px;
+  max-width: 100%;
+  perspective: $viewer-distance;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > * {
+    flex: 0 0 auto;
+  }
+
+  figure {
+    margin: 0;
+
+    width: $item-width;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+
+    img {
+      max-width: 100%;
+      box-sizing: border-box;
+      padding: 0 $item-separation / 2;
+      width: 100%; /* Utilise une largeur de 100% pour s'adapter à la largeur du conteneur */
+      height: auto; /* Utilise une hauteur automatique pour conserver les proportions de l'image */
+
+      &:not(:first-of-type) {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0;
+
+    button {
+      flex: 0 0 auto;
+      margin: 0 5px;
+
+      cursor: pointer;
+
+      color: #333;
+      background: none;
+      border: 1px solid;
+      letter-spacing: 1px;
+      padding: 5px 10px;
+      font-size: 16px; /* Utilise une taille de police fixe pour les boutons de navigation */
+    }
+  }
+
+ 
+}
+
+.modal-opened {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+ 
+
+
+  @media only screen and (max-width: 768px) {
+    #content {
+      z-index: 2;
+    }
+
+    .toggle-menu {
+      display: block;
+      top: 1vh;
+      right: 10vw;
+    }
+
+    ul {
+      display: none;
+      position: absolute;
+      margin-left: -4vw;
+      top: 8vh;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 0.4vh 0.4vh rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      background-color: white;
+      margin-top: -2vh;
+
+      li {
+        width: 100%;
+        text-align: center;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .lilpic {
+      & .overlay {
+        height: 95%;
+      }
+    }
+
+    .lilpic2 {
+      & .overlay {
+        height: 95%;
+      }
+    }
+
+    .overlay {
+      h2 {
+        font-size: 2px;
+      }
+    }
+    .carousel {
+        width: 100%;
+        $item-width: 80%;
+        $item-separation: 10%;
+        $viewer-distance: 80vw;
+    }
+
+    .modal-container {
+        flex-direction: column;
+    }
+
+    .modal-content {
+        order: 2;
+    }
+
+    .modal-content2 {
+        order: 1;
+    }
+  }

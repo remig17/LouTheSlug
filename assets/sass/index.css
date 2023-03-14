@@ -1,0 +1,108 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("assets/fonts/static/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("assets/fonts/static/Montserrat-italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("assets/fonts/static/Montserrat-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("assets/fonts/static/Montserrat-ExtraBold.ttf") format("truetype");
+  font-weight: bolder;
+  font-style: normal;
+}
+#background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+#content {
+  position: relative;
+  z-index: 1;
+  padding: 1vh;
+}
+
+nav {
+  margin-top: -5vh;
+  display: flex;
+  align-items: center;
+  animation: slide-in 0.5s forwards;
+}
+nav #logo {
+  flex: 0;
+}
+nav #logo h1 {
+  white-space: nowrap;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  font-size: 2em;
+}
+nav #logo a {
+  text-decoration: none;
+}
+nav ul {
+  display: flex;
+  margin-left: 10vw;
+}
+nav ul li {
+  padding: 5vh;
+  list-style: none;
+  justify-content: space-between;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+nav .toggle-menu {
+  display: none;
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  margin: 0;
+  z-index: 10;
+}
+
+#instagram-logo {
+  position: fixed;
+  bottom: 2vw;
+  right: 1vw;
+  z-index: 1;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: yellow;
+  font-size: 1.3rem;
+}
+
+@keyframes slide-in {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}/*# sourceMappingURL=index.css.map */
