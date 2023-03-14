@@ -46,7 +46,7 @@ nav {
       font-size: 24px;
       background-color: transparent;
       border: none;
-      color: white;
+      color: black;
       cursor: pointer;
       position: absolute;
       top: 3%;
@@ -203,7 +203,7 @@ p, h2{
   
   @keyframes slideInFromRight {
     from {
-      transform: translateX(30%);
+      transform: translateX(50%);
     }
   
     to {
@@ -217,7 +217,7 @@ p, h2{
     }
   
     to {
-      transform: translateX(30%);
+      transform: translateX(50%);
     }
   }
   
