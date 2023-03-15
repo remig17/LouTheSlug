@@ -148,12 +148,13 @@ p, h2{
   
     .text {
       color: white;
-      font-size: 20px;
+      font-size: 2rem;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
+      
     }
   
     .text-two {
@@ -161,11 +162,15 @@ p, h2{
       font-size: 15px;
       font-family: 'Montserrat-Regular', sans-serif;
       position: absolute;
-      top: 70%;
+      top: 80%;
       left: 50%;
       transform: translate(-50%, -50%);
+      background: transparent;
+      border: 0;
+      text-decoration: underline;
       text-align: center;
       float: right;
+      cursor: pointer;
     }
   }
   
@@ -178,7 +183,9 @@ p, h2{
   }
   
   .text {
+    display: flex;
     text-decoration: none;
+    align-items: flex-end;
   }
   
   @keyframes slideInFromLeft {
@@ -221,118 +228,101 @@ p, h2{
     }
   }
   
-  .modal-content {
-    display: none;
-    position: fixed;
+  
+  
+
+
+  #REWORK-modal-1, #REWORK-modal-2 {
+    background: white;
+    width: 50vw;
     height: 100vh;
-    width: 50%;
-    z-index: 9999;
-    background-color: #f5f5f5;
-    left: 0;
-    top: 0;
-    animation: slideInFromLeft 0.5s ease;
-    animation-fill-mode: forwards;
-  
-    &.close {
-      animation: slideOutToLeft 0.5s ease;
-    }
-  }
-  
-  .modal-content2 {
-    display: none;
     position: fixed;
-    height: 100vh;
-    width: 50%;
-    z-index: 9999;
-    background-color: #f5f5f5;
-    right: 0;
     top: 0;
-    animation: slideInFromRight 0.5s ease;
-    animation-fill-mode: forwards;
-    overflow-y: visible;
-    float: right;
+    transition: all .5s;
   
-    &.close {
-      animation: slideOutToRight 0.5s ease;
-    }
-  }
-  
-
-
-// Carousel configuration parameters
-$item-width: 40%; // Now we can use percentages!
-$item-separation: 0px; // This now is set with Js
-$viewer-distance: 500px;
-
-.carousel {
-  padding: 20px;
-  max-width: 100%;
-  perspective: $viewer-distance;
-  overflow: hidden;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  > * {
-    flex: 0 0 auto;
-  }
-
-  figure {
-    margin: 0;
-
-    width: $item-width;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-
-    img {
-      max-width: 100%;
-      box-sizing: border-box;
-      padding: 0 $item-separation / 2;
-      width: 100%; /* Utilise une largeur de 100% pour s'adapter à la largeur du conteneur */
-      height: auto; /* Utilise une hauteur automatique pour conserver les proportions de l'image */
-
-      &:not(:first-of-type) {
-        position: absolute;
+    &.shown {
+      &.modal-1 {
         left: 0;
-        top: 0;
+      }
+      &.modal-2 {
+        right: 0;
       }
     }
   }
-
-  nav {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0 0;
-
-    button {
-      flex: 0 0 auto;
-      margin: 0 5px;
-
-      cursor: pointer;
-
-      color: #333;
-      background: none;
-      border: 1px solid;
-      letter-spacing: 1px;
+  
+  #REWORK-modal-1 {
+    left: -50vw;
+    
+    .close-panels-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 50%;
       padding: 5px 10px;
-      font-size: 16px; /* Utilise une taille de police fixe pour les boutons de navigation */
+      cursor: pointer;
+      z-index: 1000;
     }
   }
-
- 
-}
-
-.modal-opened {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
- 
+  
+  #REWORK-modal-2 {
+    right: -50vw;
+  }
+  
+  #REWORK-carousel-container {
+    padding: 20px;
+    max-width: 100%;
+    perspective: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    > * {
+      flex: 0 0 auto;
+    }
+  
+    figure {
+      margin: 0;
+      width: 40%;
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+  
+      img {
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 0 0px;
+        width: 100%; 
+        height: auto;
+  
+        &:not(:first-of-type) {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+  
+    nav {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0 0;
+  
+      button {
+        flex: 0 0 auto;
+        margin: 0 5px;
+        cursor: pointer;
+        color: #333;
+        background: none;
+        border: 1px solid;
+        letter-spacing: 1px;
+        padding: 5px 10px;
+        font-size: 16px;
+      }
+    }
+  }
+  
 
 
   @media only screen and (max-width: 768px) {

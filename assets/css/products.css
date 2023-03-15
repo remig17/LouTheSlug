@@ -1,4 +1,3 @@
-@charset "UTF-8";
 nav {
   margin-top: -5vh;
   display: flex;
@@ -128,7 +127,7 @@ section {
 }
 .product-img-container .text {
   color: white;
-  font-size: 20px;
+  font-size: 2rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -140,11 +139,15 @@ section {
   font-size: 15px;
   font-family: "Montserrat-Regular", sans-serif;
   position: absolute;
-  top: 70%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background: transparent;
+  border: 0;
+  text-decoration: underline;
   text-align: center;
   float: right;
+  cursor: pointer;
 }
 
 .lilpic {
@@ -156,7 +159,9 @@ section {
 }
 
 .text {
+  display: flex;
   text-decoration: none;
+  align-items: flex-end;
 }
 
 @keyframes slideInFromLeft {
@@ -191,41 +196,41 @@ section {
     transform: translateX(50%);
   }
 }
-.modal-content {
-  display: none;
-  position: fixed;
+#REWORK-modal-1, #REWORK-modal-2 {
+  background: white;
+  width: 50vw;
   height: 100vh;
-  width: 50%;
-  z-index: 9999;
-  background-color: #f5f5f5;
+  position: fixed;
+  top: 0;
+  transition: all 0.5s;
+}
+#REWORK-modal-1.shown.modal-1, #REWORK-modal-2.shown.modal-1 {
   left: 0;
-  top: 0;
-  animation: slideInFromLeft 0.5s ease;
-  animation-fill-mode: forwards;
 }
-.modal-content.close {
-  animation: slideOutToLeft 0.5s ease;
-}
-
-.modal-content2 {
-  display: none;
-  position: fixed;
-  height: 100vh;
-  width: 50%;
-  z-index: 9999;
-  background-color: #f5f5f5;
+#REWORK-modal-1.shown.modal-2, #REWORK-modal-2.shown.modal-2 {
   right: 0;
-  top: 0;
-  animation: slideInFromRight 0.5s ease;
-  animation-fill-mode: forwards;
-  overflow-y: visible;
-  float: right;
-}
-.modal-content2.close {
-  animation: slideOutToRight 0.5s ease;
 }
 
-.carousel {
+#REWORK-modal-1 {
+  left: -50vw;
+}
+#REWORK-modal-1 .close-panels-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 5px 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#REWORK-modal-2 {
+  right: -50vw;
+}
+
+#REWORK-carousel-container {
   padding: 20px;
   max-width: 100%;
   perspective: 500px;
@@ -234,33 +239,33 @@ section {
   flex-direction: column;
   align-items: center;
 }
-.carousel > * {
+#REWORK-carousel-container > * {
   flex: 0 0 auto;
 }
-.carousel figure {
+#REWORK-carousel-container figure {
   margin: 0;
   width: 40%;
   transform-style: preserve-3d;
   transition: transform 0.5s;
 }
-.carousel figure img {
+#REWORK-carousel-container figure img {
   max-width: 100%;
   box-sizing: border-box;
   padding: 0 0px;
-  width: 100%; /* Utilise une largeur de 100% pour s'adapter à la largeur du conteneur */
-  height: auto; /* Utilise une hauteur automatique pour conserver les proportions de l'image */
+  width: 100%;
+  height: auto;
 }
-.carousel figure img:not(:first-of-type) {
+#REWORK-carousel-container figure img:not(:first-of-type) {
   position: absolute;
   left: 0;
   top: 0;
 }
-.carousel nav {
+#REWORK-carousel-container nav {
   display: flex;
   justify-content: center;
   margin: 20px 0 0;
 }
-.carousel nav button {
+#REWORK-carousel-container nav button {
   flex: 0 0 auto;
   margin: 0 5px;
   cursor: pointer;
@@ -269,14 +274,7 @@ section {
   border: 1px solid;
   letter-spacing: 1px;
   padding: 5px 10px;
-  font-size: 16px; /* Utilise une taille de police fixe pour les boutons de navigation */
-}
-
-.modal-opened {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  font-size: 16px;
 }
 
 @media only screen and (max-width: 768px) {
